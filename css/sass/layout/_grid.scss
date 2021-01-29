@@ -1,0 +1,40 @@
+*{
+  @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+.container{
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+
+/*   @media (min-width:768px) {
+    width: 750px;
+  }
+  @media (min-width:992px) {
+    width: 970px;
+  }
+  @media (min-width:1200px) {
+    width: 1170px;
+  } */
+
+  @media #{$minSmall} {
+    width: 750px;
+  }
+  @media #{$minMedium} {
+    width: 970px;
+  }
+  @media #{$minLarge} {
+    width: 1170px;
+  }
+}
+
+.clearfix{
+  clear: both;
+}
+
+.text-center-xs{
+  @media #{$maxMobile} {
+    text-align: center;
+  }
+}
